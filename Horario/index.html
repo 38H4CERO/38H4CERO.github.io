@@ -1,13 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Horario</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Horario</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <p>Test</p>
+  <h1>Mi Horario</h1>
 
+  <div id="horario-container">
+    <table id="horario-table" >
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>Lunes</th>
+          <th>Martes</th>
+          <th>Miércoles</th>
+          <th>Jueves</th>
+          <th>Viernes</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <form id="config-form">
+    <label for="inicio-input">Hora de inicio:</label>
+    <input type="number" id="inicio-input" min="1" max="24" required>
+    <br>
+    <label for="fin-input">Hora final:</label>
+    <input type="number" id="fin-input" min="1" max="24" required>
+    <br>
+    <label for="duracion-input">Duración de las clases (en horas):</label>
+    <input type="number" id="duracion-input" min="1" required>
+    <br>
+    <label for="comida-input">Hora de la comida (opcional):</label>
+    <input type="number" id="comida-input" min="1" max="24">
+    <br>
+    <label for="duracion-comida-input">Duración de la comida (en horas):</label>
+    <input type="number" id="duracion-comida-input" min="1">
+    <br>
+    <button type="submit">Actualizar Horario</button>
+  </form>
+
+  <script src="script.js"></script>
 </body>
 </html>
